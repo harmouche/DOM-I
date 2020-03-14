@@ -41,27 +41,54 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-// Task 1
-let classContainer = document.getElementsByClassName('container')
 
+const nav = document.querySelectorAll("nav a");
 
-const classCta = document.getElementsByClassName('cta')
+nav.forEach(element => element.style.color = "green");
 
-const classCtaText = document.getElementsByClassName('cta-text')
+nav[0].textContent = siteContent.nav["nav-item-1"];
+nav[1].textContent = siteContent.nav["nav-item-2"];
+nav[2].textContent = siteContent.nav["nav-item-3"];
+nav[3].textContent = siteContent.nav["nav-item-4"];
+nav[4].textContent = siteContent.nav["nav-item-5"];
+nav[5].textContent = siteContent.nav["nav-item-6"];
 
-const classMainContent = document.getElementsByClassName('main-content')
+// call to action
 
-const classTopContent =  document.getElementsByClassName('top-content')
+const ctaBtn = document.querySelector(".cta-text button");
+ctaBtn.textContent = siteContent.cta["button"];
 
-const classTextContent =  document.querySelectorAll('.text-content')
+const ctaImg = document.querySelector("#cta-img");
+ctaImg.src = siteContent.cta["img-src"];
 
-const classContact =  document.getElementsByClassName('contact')
+// middle content
 
-// Task 2
+const middleImg = document.querySelector("#middle-img");
+middleImg.src = siteContent["main-content"]["middle-img-src"];
 
-const classContainerHeaderNavA = document.createElement('header nav a')
+const sectionHeaders = document.querySelectorAll(".main-content h4");
+sectionHeaders[0].textContent = siteContent["main-content"]["features-h4"]
+sectionHeaders[1].textContent = siteContent["main-content"]["about-h4"]
+sectionHeaders[2].textContent = siteContent["main-content"]["services-h4"]
+sectionHeaders[3].textContent = siteContent["main-content"]["product-h4"]
+sectionHeaders[4].textContent = siteContent["main-content"]["vision-h4"]
 
+const sectionContent = document.querySelectorAll(".main-content p");
+sectionContent[0].textContent = siteContent["main-content"]["features-content"];
+sectionContent[1].textContent = siteContent["main-content"]["about-content"];
+sectionContent[2].textContent = siteContent["main-content"]["services-content"];
+sectionContent[3].textContent = siteContent["main-content"]["product-content"];
+sectionContent[4].textContent = siteContent["main-content"]["vision-content"];
 
-classContainerHeaderNavA.textContent = siteContent[0];
-console.log(classContainer);
+//contact
+const contactHeader = document.querySelector(".contact h4");
+contactHeader.textContent = siteContent.contact["contact-h4"];
 
+const contactContent = document.querySelectorAll(".contact p");
+contactContent[0].innerHTML = siteContent.contact["address"];
+contactContent[1].textContent = siteContent.contact["phone"];
+contactContent[2].textContent = siteContent.contact["email"];
+
+//footer
+const footer = document.querySelector("footer p");
+footer.textContent = siteContent.footer["copyright"]; 
